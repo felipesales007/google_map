@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Mapa</title>
+    </head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Aplica efeito de cinza no mapa, tire se quiser usar o mapa na cor normal -->
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+
+    <body>
+        <!-- Add Google Maps                                           no width e height você vai definindo o tamanho -->
+            <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+        <!-- /Add Google Maps -->
+
+        <script>
+            function myMap() {
+                // Aqui é necessario você colocar a sua localização por coordenadas (por numeros) acesse: http://www.mapcoordinates.net/pt para obtelas
+                // Coordenadas necessaria para o ponto do mapa inicializar onde você quer
+                myCenter = new google.maps.LatLng(-12.93172685, -38.44441295);
+                var mapOptions = {
+                    center: myCenter,
+                    zoom: 12, scrollwheel: false, draggable: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+                var marker = new google.maps.Marker({
+                    position: myCenter,
+                });
+                    marker.setMap(map);
+            }
+        </script>
+        <!-- Aqui é necessario que você obtenha um key code (para visualização do mapa) , acesse: https://console.developers.google.com
+             e cole o codigo gerado em ...?key=(seu codigo)"></script> como segue abaixo (nesse caso abaixo tem o meu codigo)
+        -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhGm54wZN66gyk9MdQF1xLs6RY-WGumRU&callback=myMap"></script>
+        <!--
+            Caso queira aprender mais sobre mapas e outras aplicações/modos de exibição acesse: https://www.w3schools.com/graphics/google_maps_basic.asp
+        -->
+    </body>
+</html>
