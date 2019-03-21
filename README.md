@@ -11,6 +11,7 @@ API Google Maps para seu site, com instruções de uso.
 [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width="120" height="120" />](http://www.php.net/)
 
 ## Documentação
+
 A documentação do Google Maps está disponível em [website](https://cloud.google.com/maps-platform/?hl=pt-br).
 
 ## Suporte nos navegadores
